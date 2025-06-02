@@ -1,0 +1,86 @@
+# iOS/Xcode проект
+*.xcuserstate
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+DerivedData/
+build/
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Python (будет добавлен автоматически при сборке)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv
+.env
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Временные файлы
+*.tmp
+*.temp
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Архивы
+*.zip
+*.tar.gz
+*.rar
+
+# Сертификаты и ключи (для безопасности)
+*.p12
+*.mobileprovision
+*.cer
+*.key
+*.pem
+
+# Пользовательские настройки Xcode
+xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+
+# CocoaPods (если будет использоваться)
+Pods/
+*.xcworkspace
+
+# Carthage (если будет использоваться)
+Carthage/Build/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+*.bat.bak
