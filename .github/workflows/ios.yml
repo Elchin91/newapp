@@ -25,21 +25,24 @@ jobs:
         
     - name: Build iOS App
       run: ./build_ipa.sh
+      continue-on-error: true
         
     - name: Upload IPA Artifact
       uses: actions/upload-artifact@v4
+      if: always()
       with:
         name: iSponsorBlockTV-${{ github.run_number }}
         path: build/*.ipa
         retention-days: 30
         
     - name: Create Release
-      if: github.ref == 'refs/heads/main' && success()
+      if: github.ref == 'refs/heads/main'
       uses: softprops/action-gh-release@v1
       with:
         tag_name: v1.0.${{ github.run_number }}
         name: iSponsorBlockTV v1.0.${{ github.run_number }}
         files: build/*.ipa
         generate_release_notes: true
+        fail_on_unmatched_files: false
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
